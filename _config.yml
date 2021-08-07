@@ -1,7 +1,7 @@
 # Site settings
 title: BY Blog
 SEOTitle: 子明的博客 | BY Blog
-header-img: img/post-bg-desk.jpg
+header-img: img/timg7.jpg
 email: chenziming1994@163.com
 description: "Every failure is leading towards success."
 keyword: "BY, BY Blog, 子明的博客, chenziming, 陈子明, iOS, Apple, iPhone"
@@ -12,7 +12,7 @@ github_repo: "https://github.com/backstreetboy1994/backstreetboy1994.github.io.g
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/timg14.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
