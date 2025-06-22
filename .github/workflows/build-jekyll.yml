@@ -18,6 +18,12 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+            
+      # Update and clean the package list
+      - run: apt-get update && apt-get upgrade -y && apt-get clean
+
+      # Install git-all
+      - run: apt-get install -y git-all
 
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.2.1
