@@ -22,8 +22,8 @@ jobs:
       # Update and clean the package list
       - run: apt-get update && apt-get upgrade -y && apt-get clean
 
-      # Install git-all with --no-install-recommends
-      - run: apt-get install -y --no-install-recommends git-all
+      # Install git-all with verbose output
+      - run: apt-get install -y git-all
 
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.2.1
