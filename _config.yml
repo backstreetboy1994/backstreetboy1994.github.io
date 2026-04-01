@@ -4,7 +4,7 @@ SEOTitle: 小棒棒的博客 | YPF Blog
 header-img: img/timg7.jpg
 email: chenziming1994@163.com
 description: "Every failure is leading towards success."
-keyword: "YPF, YPF Blog, 小棒棒的博客, Linux, Java, Redis"
+keyword: "YPF, YPF Blog, 小棒棒的博客，Linux, Java, Redis"
 url: "http://backstreetboy1994.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/backstreetboy1994/backstreetboy1994.github.io.git" # you code repository
@@ -61,13 +61,13 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID:                             #生成的clientID
-  clientSecret:     #生成的clientSecret
+  enable: true    #是否开启 Gitalk 评论
+  clientID:                             #生成的 clientID
+  clientSecret:     #生成的 clientSecret
   repo: backstreetboy1994.github.io    #仓库名称
-  owner: chenziming    #github用户名
+  owner: chenziming    #github 用户名
   #admin: chenziming
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  distractionFreeMode: true #是否启用类似 FB 的阴影遮罩
 
 
 # 统计
@@ -78,7 +78,7 @@ gitalk:
 
 # Google Analytics
 #ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-#ga_domainiu: aotu               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+#ga_domainiu: aotu               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成 auto
 
 
 
@@ -87,6 +87,10 @@ gitalk:
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
 featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+
+# Featured Categories
+featured-categories: true               # 是否启用分类展示
+featured-condition-size: 1              # 相同分类数量大于这个数，才会出现在侧边栏
 
 
 

@@ -32,6 +32,22 @@ layout: default
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
+                <!-- Featured Categories -->
+                {% if site.featured-categories %}
+                <section>
+                    <h5><a href="{{'/categories/' | prepend: site.baseurl }}">CATEGORIES</a></h5>
+                    <div class="categories">
+                        {% for category in site.categories %}
+                            {% if category[1].size > {{site.featured-condition-size}} %}
+                                <a href="{{ site.baseurl }}/categories/#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">
+                                    {{ category[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
                 <section>
@@ -81,6 +97,23 @@ layout: default
                 col-xs-12
                 sidebar-container
             ">
+                <!-- Featured Categories -->
+                {% if site.featured-categories %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/categories/' | prepend: site.baseurl }}">CATEGORIES</a></h5>
+                    <div class="categories">
+                        {% for category in site.categories %}
+                            {% if category[1].size > {{site.featured-condition-size}} %}
+                                <a href="{{ site.baseurl }}/categories/#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">
+                                    {{ category[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
                 <section>

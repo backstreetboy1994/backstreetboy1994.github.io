@@ -82,13 +82,13 @@ layout: default
                 </ul>
 
 
-                <!--Gitalk评论start  -->
+                <!--Gitalk 评论 start  -->
                 {% if site.gitalk.enable %}
-                <!-- 引入Gitalk评论插件  -->
+                <!-- 引入 Gitalk 评论插件  -->
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
                 <div id="gitalk-container"></div>
-                <!-- 引入一个生产md5的js，用于对id值进行处理，防止其过长 -->
+                <!-- 引入一个生产 md5 的 js，用于对 id 值进行处理，防止其过长 -->
                 <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
                 <script src="{{ site.baseurl }}/js/md5.min.js"></script>
                 <script type="text/javascript">
@@ -139,6 +139,23 @@ layout: default
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
+                <!-- Featured Categories -->
+                {% if site.featured-categories %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/categories/">CATEGORIES</a></h5>
+                    <div class="categories">
+                        {% for category in site.categories %}
+                            {% if category[1].size > {{site.featured-condition-size}} %}
+                                <a href="/categories/#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">
+                                    {{ category[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
                 <section>
@@ -173,7 +190,7 @@ layout: default
 
 
 {% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus 公共 JS 代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "{{site.disqus_username}}";
@@ -186,7 +203,7 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- disqus 公共JS代码 end -->
+<!-- disqus 公共 JS 代码 end -->
 {% endif %}
 
 
@@ -205,7 +222,7 @@ layout: default
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        // BY Fix:去除标题前的‘#’ issues:<>
+        // BY Fix:去除标题前的'#' issues:<>
         // anchors.options = {
         //   visible: 'always',
         //   placement: 'right',
